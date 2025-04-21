@@ -130,20 +130,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isOfferedBy"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport"/>
-        <rdfs:comment>Defines a relation where an entity such as a company offers a service such as a transport service</rdfs:comment>
-        <rdfs:label>offers</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine -->
 
 
@@ -177,11 +163,26 @@
 
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isOfferedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/offers"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport"/>
         <rdfs:range rdf:resource="https://dbpedia.org/ontology/Company"/>
         <rdfs:comment>Defines a relation where an entity such a service is offered by other entities such as a company</rdfs:comment>
         <rdfs:isDefinedBy>https://saref.etsi.org/core/isOfferedBy</rdfs:isDefinedBy>
         <rdfs:label>isOfferedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/offers -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/offers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport"/>
+        <rdfs:comment>Defines a relation where an entity such as a company offers a service such as a transport service</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/offers</rdfs:isDefinedBy>
+        <rdfs:label>offers</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -804,7 +805,7 @@
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/ontology/Company"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers"/>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/offers"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport"/>
             </owl:Restriction>
         </rdfs:subClassOf>

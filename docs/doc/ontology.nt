@@ -64,15 +64,6 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/isOfferedBy> .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relation where an entity such as a company offers a service such as a transport service" .
-<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#label> "offers" .
-# 
 # http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -94,11 +85,21 @@
 # https://saref.etsi.org/core/isOfferedBy
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/offers> .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/ontology/Company> .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relation where an entity such a service is offered by other entities such as a company" .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://saref.etsi.org/core/isOfferedBy" .
 <https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isOfferedBy" .
+# 
+# https://saref.etsi.org/core/offers
+<https://saref.etsi.org/core/offers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relation where an entity such as a company offers a service such as a transport service" .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://saref.etsi.org/core/offers" .
+<https://saref.etsi.org/core/offers> <http://www.w3.org/2000/01/rdf-schema#label> "offers" .
 # 
 # 
 # 
@@ -484,7 +485,7 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Company> .
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
 _:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/offers> .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents a transport company. Subclass of class Company." .
 <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#label> "TransportCompany" .
