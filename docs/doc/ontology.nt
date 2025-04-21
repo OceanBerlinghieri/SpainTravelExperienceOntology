@@ -1,0 +1,804 @@
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/0.0.1> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/dc/terms/created> "2025-04-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/dc/terms/creator> "https://www.linkedin.com/in/oceanberlinghieri/" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/dc/terms/description> "The STEO ontology is used to represent de domain of touristic offer in Spain" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/dc/terms/title> "Spain Travel Experience Ontology" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "steo" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://www.w3.org/2000/01/rdf-schema#label> "steo" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://www.w3.org/2002/07/owl#priorVersion> "0.0.0" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/core/isOfferedBy> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relation where an entity such as a company offers a service such as a transport service" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> <http://www.w3.org/2000/01/rdf-schema#label> "offers" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the cuisine type such as italian cuisine that a restaurant serves" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "servesCuisine" .
+# 
+# https://dbpedia.org/ontology/locationCity
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/City> .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines where an entity such as an event is located. This can be a city, country, etc." .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://dbpedia.org/ontology/locationCity" .
+<https://dbpedia.org/ontology/locationCity> <http://www.w3.org/2000/01/rdf-schema#label> "locationCity" .
+# 
+# https://saref.etsi.org/core/isOfferedBy
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/ontology/Company> .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relation where an entity such a service is offered by other entities such as a company" .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://saref.etsi.org/core/isOfferedBy" .
+<https://saref.etsi.org/core/isOfferedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isOfferedBy" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents de mean price of a given entity" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> <http://www.w3.org/2000/01/rdf-schema#label> "meanPrice" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the price per night of a service such as a Hotel" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> <http://www.w3.org/2000/01/rdf-schema#label> "nightPrice" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the rating of a given entity such as a Hotel or a Restaurant" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> <http://www.w3.org/2000/01/rdf-schema#label> "rating" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the stars of a Hotel" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> <http://www.w3.org/2000/01/rdf-schema#label> "stars" .
+# 
+# https://schema.org/latitude
+<https://schema.org/latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/City> .
+<https://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the latitude coordinate of a given entity" .
+<https://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/latitude" .
+<https://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+# 
+# https://schema.org/longitude
+<https://schema.org/longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/City> .
+<https://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the longitude coordinate of a given entity" .
+<https://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/longitude" .
+<https://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+# 
+# https://schema.org/startDate
+<https://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Event> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the start date of an event" .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/startDate" .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "startDate" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent the andalusian cuisine type" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "AndalusianCuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent tourstic beaches" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach> <http://www.w3.org/2000/01/rdf-schema#label> "Beach" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent beach hotels" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BeachHotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent transports by bike" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport> <http://www.w3.org/2000/01/rdf-schema#label> "BikeTransport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent transports by bus" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> <http://www.w3.org/2000/01/rdf-schema#label> "BusTransport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent business hotels" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BusinessHotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "Parent class to represent a type of cuisine." .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> <http://www.w3.org/2000/01/rdf-schema#label> "Cuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent touristic cultural attractions" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent cultural events" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "CulturalEvent" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent gastronomic events" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "GastronomicEvent" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.org/City> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://dbpedia.org/ontology/locationCity> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2001/XMLSchema#minExclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2001/XMLSchema#minExclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2001/XMLSchema#minExclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent hotels" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to represent the italian cuisine type" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "ItalianCuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent restaurants with specific italian cuisine" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "ItalianRestaurant" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to represent the japanses cuisine type" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "JapaneseCuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent luxury hotels. Luxury hotels are hotels with 5 stars." .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#label> "LuxuryHotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent mediterranean cuisine type" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "MediterraneanCuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent transports by metro" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport> <http://www.w3.org/2000/01/rdf-schema#label> "MetroTransport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent mexican cuisine type" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine> <http://www.w3.org/2000/01/rdf-schema#label> "MexicanCuisine" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent touristic monuments" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "Monument" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent tourstic museums" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum> <http://www.w3.org/2000/01/rdf-schema#label> "Museum" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent musical events" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "MusicalEvent" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent touristic parks" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> <http://www.w3.org/2000/01/rdf-schema#label> "Park" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.org/City> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://dbpedia.org/ontology/locationCity> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+_:genid19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2001/XMLSchema#minExclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2001/XMLSchema#minExclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent all types of restaurant" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent rural hotels." .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel> <http://www.w3.org/2000/01/rdf-schema#label> "RuralHotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent sport events" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent> <http://www.w3.org/2000/01/rdf-schema#label> "SportEvent" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent taxi transports" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#label> "TaxiTransport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent tecnologic events" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "TecnologicEvent" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.org/City> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://dbpedia.org/ontology/locationCity> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2001/XMLSchema#minExclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid31 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent all tourist attractions" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "TouristAttraction" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent touristic hotels." .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#label> "TouristicHotel" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent transports by tram" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport> <http://www.w3.org/2000/01/rdf-schema#label> "TramTransport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.org/City> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://dbpedia.org/ontology/locationCity> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://dbpedia.org/ontology/Company> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/isOfferedBy> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/2001/XMLSchema#minExclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid39 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent different types of transports" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Company> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents a transport company. Subclass of class Company." .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> <http://www.w3.org/2000/01/rdf-schema#label> "TransportCompany" .
+# 
+# https://dbpedia.org/ontology/Company
+<https://dbpedia.org/ontology/Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dbpedia.org/ontology/Company> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents companies" .
+<https://dbpedia.org/ontology/Company> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://dbpedia.org/ontology/Company" .
+<https://dbpedia.org/ontology/Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company" .
+# 
+# https://schema.org/City
+<https://schema.org/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/latitude> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/longitude> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/City> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents Cities" .
+<https://schema.org/City> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/City" .
+<https://schema.org/City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# https://schema.org/Event
+<https://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.org/City> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://dbpedia.org/ontology/locationCity> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/startDate> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent all types of events" .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/Event" .
+<https://schema.org/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla> <https://schema.org/startDate> "2024-05-08T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> "4.4"^^<http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> "175"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> "4.6"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice> "278"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> "4.7"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/City> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> <https://schema.org/latitude> "-4.4210" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga> <https://schema.org/longitude> "36.7213" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice> "72.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating> "4.1"^^<http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/City> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> <https://schema.org/latitude> "-5.9823" .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> <https://schema.org/longitude> "37.3886" .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus> <https://saref.etsi.org/core/isOfferedBy> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> .
+# 
+# http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dbpedia.org/ontology/Company> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla> <https://dbpedia.org/ontology/locationCity> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid48 <http://www.w3.org/2002/07/owl#members> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid54 <http://www.w3.org/2002/07/owl#members> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid60 <http://www.w3.org/2002/07/owl#members> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid66 <http://www.w3.org/2002/07/owl#members> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Event> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/City> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://dbpedia.org/ontology/Company> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid75 <http://www.w3.org/2002/07/owl#members> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid81 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid81 <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that assigns luxury subclass to hotels of 5 stars" .
+_:genid81 <http://www.w3.org/2000/01/rdf-schema#label> "LuxuryHotelRule" .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid81 <http://www.w3.org/2003/11/swrl#body> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid83 .
+_:genid83 <http://www.w3.org/2003/11/swrl#argument2> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid83 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid83 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid85 .
+_:genid85 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid85 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid81 <http://www.w3.org/2003/11/swrl#head> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid87 .
+_:genid87 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid87 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid88 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid88 <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that assings ItalianRestaurantClass to restaurants serving italian cuisine" .
+_:genid88 <http://www.w3.org/2000/01/rdf-schema#label> "ItalianRestaurantRule" .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid88 <http://www.w3.org/2003/11/swrl#body> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid90 .
+_:genid90 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/c> .
+_:genid90 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid92 .
+_:genid92 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/c> .
+_:genid92 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid92 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid94 .
+_:genid94 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid94 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid88 <http://www.w3.org/2003/11/swrl#head> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid96 .
+_:genid96 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid96 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid97 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid97 <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that assigns TransportCompany class to companies that offers a tranpsport service" .
+_:genid97 <http://www.w3.org/2000/01/rdf-schema#label> "TransportCompanyRule" .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid97 <http://www.w3.org/2003/11/swrl#body> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid99 .
+_:genid99 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/y> .
+_:genid99 <http://www.w3.org/2003/11/swrl#classPredicate> <https://dbpedia.org/ontology/Company> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid101 .
+_:genid101 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/y> .
+_:genid101 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid101 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://saref.etsi.org/core/isOfferedBy> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid103 .
+_:genid103 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/x> .
+_:genid103 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid97 <http://www.w3.org/2003/11/swrl#head> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid105 .
+_:genid105 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/y> .
+_:genid105 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

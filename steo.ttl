@@ -1,0 +1,781 @@
+@prefix : <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/> .
+
+<http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo> rdf:type owl:Ontology ;
+                                                                 owl:versionIRI <http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/0.0.1> ;
+                                                                 dct:created "2025-04-21"^^xsd:date ;
+                                                                 dct:creator "https://www.linkedin.com/in/oceanberlinghieri/" ;
+                                                                 dct:description "The STEO ontology is used to represent de domain of touristic offer in Spain" ;
+                                                                 dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                 dct:title "Spain Travel Experience Ontology" ;
+                                                                 vann:preferredNamespacePrefix "steo" ;
+                                                                 vann:preferredNamespaceUri : ;
+                                                                 rdfs:label "steo" ;
+                                                                 owl:priorVersion "0.0.0" ;
+                                                                 owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers
+:offers rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        owl:inverseOf <https://saref.etsi.org/core/isOfferedBy> ;
+        rdfs:domain :TransportCompany ;
+        rdfs:range :Transport ;
+        rdfs:comment "Defines a relation where an entity such as a company offers a service such as a transport service" ;
+        rdfs:label "offers" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine
+:servesCuisine rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Restaurant ;
+               rdfs:range :Cuisine ;
+               rdfs:comment "Defines the cuisine type such as italian cuisine that a restaurant serves" ;
+               rdfs:label "servesCuisine" .
+
+
+###  https://dbpedia.org/ontology/locationCity
+<https://dbpedia.org/ontology/locationCity> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdf:type owl:FunctionalProperty ;
+                                            rdfs:range <https://schema.org/City> ;
+                                            rdfs:comment "Defines where an entity such as an event is located. This can be a city, country, etc." ;
+                                            rdfs:isDefinedBy "https://dbpedia.org/ontology/locationCity" ;
+                                            rdfs:label "locationCity" .
+
+
+###  https://saref.etsi.org/core/isOfferedBy
+<https://saref.etsi.org/core/isOfferedBy> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                          rdfs:domain :Transport ;
+                                          rdfs:range <https://dbpedia.org/ontology/Company> ;
+                                          rdfs:comment "Defines a relation where an entity such a service is offered by other entities such as a company" ;
+                                          rdfs:isDefinedBy "https://saref.etsi.org/core/isOfferedBy" ;
+                                          rdfs:label "isOfferedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice
+:meanPrice rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:range xsd:double ;
+           rdfs:comment "Represents de mean price of a given entity" ;
+           rdfs:label "meanPrice" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice
+:nightPrice rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Hotel ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Represents the price per night of a service such as a Hotel" ;
+            rdfs:label "nightPrice" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating
+:rating rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:range xsd:double ;
+        rdfs:comment "Represents the rating of a given entity such as a Hotel or a Restaurant" ;
+        rdfs:label "rating" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars
+:stars rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Hotel ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "Represents the stars of a Hotel" ;
+       rdfs:label "stars" .
+
+
+###  https://schema.org/latitude
+<https://schema.org/latitude> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <https://schema.org/City> ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Represents the latitude coordinate of a given entity" ;
+                              rdfs:isDefinedBy "https://schema.org/latitude" ;
+                              rdfs:label "latitude" .
+
+
+###  https://schema.org/longitude
+<https://schema.org/longitude> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://schema.org/City> ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Represents the longitude coordinate of a given entity" ;
+                               rdfs:isDefinedBy "https://schema.org/longitude" ;
+                               rdfs:label "longitude" .
+
+
+###  https://schema.org/startDate
+<https://schema.org/startDate> rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain <https://schema.org/Event> ;
+                               rdfs:range xsd:dateTime ;
+                               rdfs:comment "Represents the start date of an event" ;
+                               rdfs:isDefinedBy "https://schema.org/startDate" ;
+                               rdfs:label "startDate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine
+:AndalusianCuisine rdf:type owl:Class ;
+                   rdfs:subClassOf :Cuisine ;
+                   rdfs:comment "Class to represent the andalusian cuisine type" ;
+                   rdfs:label "AndalusianCuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach
+:Beach rdf:type owl:Class ;
+       rdfs:subClassOf :TouristAttraction ;
+       rdfs:comment "Class to represent tourstic beaches" ;
+       rdfs:label "Beach" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel
+:BeachHotel rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "Class to represent beach hotels" ;
+            rdfs:label "BeachHotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport
+:BikeTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "Class to represent transports by bike" ;
+               rdfs:label "BikeTransport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport
+:BusTransport rdf:type owl:Class ;
+              rdfs:subClassOf :Transport ;
+              rdfs:comment "Class to represent transports by bus" ;
+              rdfs:label "BusTransport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel
+:BusinessHotel rdf:type owl:Class ;
+               rdfs:subClassOf :Hotel ;
+               rdfs:comment "Class to represent business hotels" ;
+               rdfs:label "BusinessHotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine
+:Cuisine rdf:type owl:Class ;
+         rdfs:comment "Parent class to represent a type of cuisine." ;
+         rdfs:label "Cuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural
+:Cultural rdf:type owl:Class ;
+          rdfs:subClassOf :TouristAttraction ;
+          rdfs:comment "Class to represent touristic cultural attractions" ;
+          rdfs:label "Cultural" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf <https://schema.org/Event> ;
+               rdfs:comment "Class to represent cultural events" ;
+               rdfs:label "CulturalEvent" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent
+:GrastronomicEvent rdf:type owl:Class ;
+                   rdfs:subClassOf <https://schema.org/Event> ;
+                   rdfs:comment "Class to represent gastronomic events" ;
+                   rdfs:label "GastronomicEvent" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://dbpedia.org/ontology/locationCity> ;
+                         owl:someValuesFrom <https://schema.org/City>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :nightPrice ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                           owl:onDatatype xsd:integer ;
+                                           owl:withRestrictions ( [ xsd:minExclusive 0
+                                                                  ]
+                                                                )
+                                         ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :rating ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                           owl:onDatatype xsd:double ;
+                                           owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                  ]
+                                                                  [ xsd:maxInclusive "5.0"^^xsd:double
+                                                                  ]
+                                                                )
+                                         ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :stars ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                           owl:onDatatype xsd:integer ;
+                                           owl:withRestrictions ( [ xsd:minExclusive 0
+                                                                  ]
+                                                                  [ xsd:maxInclusive 5
+                                                                  ]
+                                                                )
+                                         ]
+                       ] ;
+       rdfs:comment "Class to represent hotels" ;
+       rdfs:label "Hotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine
+:ItalianCuisine rdf:type owl:Class ;
+                rdfs:subClassOf :Cuisine ;
+                rdfs:comment "A class to represent the italian cuisine type" ;
+                rdfs:label "ItalianCuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant
+:ItalianRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "Class to represent restaurants with specific italian cuisine" ;
+                   rdfs:label "ItalianRestaurant" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine
+:JapaneseCuisine rdf:type owl:Class ;
+                 rdfs:subClassOf :Cuisine ;
+                 rdfs:comment "A class to represent the japanses cuisine type" ;
+                 rdfs:label "JapaneseCuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel ;
+             rdfs:comment "Class to represent luxury hotels. Luxury hotels are hotels with 5 stars." ;
+             rdfs:label "LuxuryHotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine
+:MediterraneanCuisine rdf:type owl:Class ;
+                      rdfs:subClassOf :Cuisine ;
+                      rdfs:comment "Class to represent mediterranean cuisine type" ;
+                      rdfs:label "MediterraneanCuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport
+:MetroTransport rdf:type owl:Class ;
+                rdfs:subClassOf :Transport ;
+                rdfs:comment "Class to represent transports by metro" ;
+                rdfs:label "MetroTransport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine
+:MexicanCuisine rdf:type owl:Class ;
+                rdfs:subClassOf :Cuisine ;
+                rdfs:comment "Class to represent mexican cuisine type" ;
+                rdfs:label "MexicanCuisine" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf :TouristAttraction ;
+          rdfs:comment "Class to represent touristic monuments" ;
+          rdfs:label "Monument" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :TouristAttraction ;
+        rdfs:comment "Class to represent tourstic museums" ;
+        rdfs:label "Museum" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent
+:MusicalEvent rdf:type owl:Class ;
+              rdfs:subClassOf <https://schema.org/Event> ;
+              rdfs:comment "Class to represent musical events" ;
+              rdfs:label "MusicalEvent" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :TouristAttraction ;
+      rdfs:comment "Class to represent touristic parks" ;
+      rdfs:label "Park" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty <https://dbpedia.org/ontology/locationCity> ;
+                              owl:someValuesFrom <https://schema.org/City>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :servesCuisine ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Cuisine
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :meanPrice ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                owl:onDatatype xsd:double ;
+                                                owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                       ]
+                                                                     )
+                                              ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :rating ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                owl:onDatatype xsd:double ;
+                                                owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                       ]
+                                                                       [ xsd:maxInclusive "5.0"^^xsd:double
+                                                                       ]
+                                                                     )
+                                              ]
+                            ] ;
+            rdfs:comment "Class to represent all types of restaurant" ;
+            rdfs:label "Restaurant" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel
+:RuralHotel rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "Class to represent rural hotels." ;
+            rdfs:label "RuralHotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent
+:SportEvent rdf:type owl:Class ;
+            rdfs:subClassOf <https://schema.org/Event> ;
+            rdfs:comment "Class to represent sport events" ;
+            rdfs:label "SportEvent" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport
+:TaxiTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "Class to represent taxi transports" ;
+               rdfs:label "TaxiTransport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent
+:TeconologicEvent rdf:type owl:Class ;
+                  rdfs:subClassOf <https://schema.org/Event> ;
+                  rdfs:comment "Class to represent tecnologic events" ;
+                  rdfs:label "TecnologicEvent" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction
+:TouristAttraction rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty <https://dbpedia.org/ontology/locationCity> ;
+                                     owl:someValuesFrom <https://schema.org/City>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :rating ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                       owl:onDatatype xsd:double ;
+                                                       owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                              ]
+                                                                              [ xsd:maxInclusive "5.0"^^xsd:double
+                                                                              ]
+                                                                            )
+                                                     ]
+                                   ] ;
+                   rdfs:comment "Class to represent all tourist attractions" ;
+                   rdfs:label "TouristAttraction" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel
+:TouristicHotel rdf:type owl:Class ;
+                rdfs:subClassOf :Hotel ;
+                rdfs:comment "Class to represent touristic hotels." ;
+                rdfs:label "TouristicHotel" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport
+:TramTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "Class to represent transports by tram" ;
+               rdfs:label "TramTransport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty <https://dbpedia.org/ontology/locationCity> ;
+                             owl:someValuesFrom <https://schema.org/City>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <https://saref.etsi.org/core/isOfferedBy> ;
+                             owl:someValuesFrom <https://dbpedia.org/ontology/Company>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :meanPrice ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                               owl:onDatatype xsd:double ;
+                                               owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                      ]
+                                                                    )
+                                             ]
+                           ] ;
+           rdfs:comment "Class to represent different types of transports" ;
+           rdfs:label "Transport" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany
+:TransportCompany rdf:type owl:Class ;
+                  rdfs:subClassOf <https://dbpedia.org/ontology/Company> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :offers ;
+                                    owl:someValuesFrom :Transport
+                                  ] ;
+                  rdfs:comment "Class that represents a transport company. Subclass of class Company." ;
+                  rdfs:label "TransportCompany" .
+
+
+###  https://dbpedia.org/ontology/Company
+<https://dbpedia.org/ontology/Company> rdf:type owl:Class ;
+                                       rdfs:comment "Class that represents companies" ;
+                                       rdfs:isDefinedBy "https://dbpedia.org/ontology/Company" ;
+                                       rdfs:label "Company" .
+
+
+###  https://schema.org/City
+<https://schema.org/City> rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty <https://schema.org/latitude> ;
+                                            owl:allValuesFrom xsd:string
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty <https://schema.org/longitude> ;
+                                            owl:allValuesFrom xsd:string
+                                          ] ;
+                          rdfs:comment "Class that represents Cities" ;
+                          rdfs:isDefinedBy "https://schema.org/City" ;
+                          rdfs:label "City" .
+
+
+###  https://schema.org/Event
+<https://schema.org/Event> rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty <https://dbpedia.org/ontology/locationCity> ;
+                                             owl:someValuesFrom <https://schema.org/City>
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <https://schema.org/startDate> ;
+                                             owl:someValuesFrom xsd:dateTime
+                                           ] ;
+                           rdfs:comment "Class to represent all types of events" ;
+                           rdfs:isDefinedBy "https://schema.org/Event" ;
+                           rdfs:label "Event" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla
+:CarnavalSevilla rdf:type owl:NamedIndividual ,
+                          :MusicalEvent ;
+                 <https://dbpedia.org/ontology/locationCity> :Sevilla ;
+                 <https://schema.org/startDate> "2024-05-08T00:00:00.000Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga
+:CatedralMálaga rdf:type owl:NamedIndividual ,
+                         :Park ;
+                <https://dbpedia.org/ontology/locationCity> :Málaga ;
+                :rating "4.4"^^xsd:double .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga
+:HotelRoyalMálaga rdf:type owl:NamedIndividual ,
+                           :BeachHotel ;
+                  <https://dbpedia.org/ontology/locationCity> :Málaga ;
+                  :nightPrice 175 ;
+                  :rating "4.6"^^xsd:double ;
+                  :stars 5 .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla
+:HotelVistaSevilla rdf:type owl:NamedIndividual ,
+                            :BeachHotel ;
+                   <https://dbpedia.org/ontology/locationCity> :Sevilla ;
+                   :nightPrice 278 ;
+                   :rating "4.7"^^xsd:double ;
+                   :stars 4 .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga
+:Málaga rdf:type owl:NamedIndividual ,
+                 <https://schema.org/City> ;
+        <https://schema.org/latitude> "-4.4210" ;
+        <https://schema.org/longitude> "36.7213" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla
+:RestauranteSaborSevilla rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :servesCuisine :SpaghettiCarbonara ;
+                         :meanPrice "72.0"^^xsd:double ;
+                         :rating "4.1"^^xsd:double .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla
+:Sevilla rdf:type owl:NamedIndividual ,
+                  <https://schema.org/City> ;
+         <https://schema.org/latitude> "-5.9823" ;
+         <https://schema.org/longitude> "37.3886" .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus
+:SevillaBus rdf:type owl:NamedIndividual ,
+                     :BusTransport ;
+            <https://dbpedia.org/ontology/locationCity> :Sevilla ;
+            <https://saref.etsi.org/core/isOfferedBy> :TransSevilla .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara
+:SpaghettiCarbonara rdf:type owl:NamedIndividual ,
+                             :ItalianCuisine .
+
+
+###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla
+:TransSevilla rdf:type owl:NamedIndividual ,
+                       <https://dbpedia.org/ontology/Company> ;
+              <https://dbpedia.org/ontology/locationCity> :Sevilla .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AndalusianCuisine
+                :ItalianCuisine
+                :JapaneseCuisine
+                :MediterraneanCuisine
+                :MexicanCuisine
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Beach
+                :Cultural
+                :Monument
+                :Museum
+                :Park
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BikeTransport
+                :BusTransport
+                :MetroTransport
+                :TaxiTransport
+                :TramTransport
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cuisine
+                :Hotel
+                :Restaurant
+                :TouristAttraction
+                :Transport
+                <https://dbpedia.org/ontology/Company>
+                <https://schema.org/City>
+                <https://schema.org/Event>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CulturalEvent
+                :GrastronomicEvent
+                :MusicalEvent
+                :SportEvent
+                :TeconologicEvent
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A rule that assigns luxury subclass to hotels of 5 stars" ;
+   rdfs:label "LuxuryHotelRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :stars ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> 5
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LuxuryHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A rule that assings ItalianRestaurantClass to restaurants serving italian cuisine" ;
+   rdfs:label "ItalianRestaurantRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :servesCuisine ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :ItalianCuisine ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ItalianRestaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A rule that assigns TransportCompany class to companies that offers a tranpsport service" ;
+   rdfs:label "TransportCompanyRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Transport ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://saref.etsi.org/core/isOfferedBy> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://dbpedia.org/ontology/Company> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :y
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TransportCompany ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :y
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

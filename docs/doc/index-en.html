@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Spain Travel Experience Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/","name":"Spain Travel Experience Ontology", "headline":"Document describing the ontology http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/", "dateReleased":"2025-04-21", "version":"0.0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"https://www.linkedin.com/in/oceanberlinghieri/"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Spain Travel Experience Ontology</h1>
+<h2>Release: 2025-04-21</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/0.0.1">http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/0.0.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/">http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="0.0.0">0.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Authors:</dt>
+<dd>https://www.linkedin.com/in/oceanberlinghieri/</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>https://www.linkedin.com/in/oceanberlinghieri/. Spain Travel Experience Ontology. Revision: 0.0.1. Retrieved from: http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/0.0.1</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>core</b></td><td>&lt;https://saref.etsi.org/core/&gt;</td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;https://dbpedia.org/ontology/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>steo</b></td><td>&lt;http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrla</b></td><td>&lt;http://swrl.stanford.edu/ontologies/3.3/swrla.owl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">steo: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AndalusianCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a>
+   </li>
+   <li>
+      <a href="#Beach"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a>
+   </li>
+   <li>
+      <a href="#BeachHotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel">BeachHotel</a>
+   </li>
+   <li>
+      <a href="#BikeTransport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a>
+   </li>
+   <li>
+      <a href="#BusinessHotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel">BusinessHotel</a>
+   </li>
+   <li>
+      <a href="#BusTransport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/City" title="https://schema.org/City">City</a>
+   </li>
+   <li>
+      <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a>
+   </li>
+   <li>
+      <a href="#Cuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a>
+   </li>
+   <li>
+      <a href="#Cultural"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a>
+   </li>
+   <li>
+      <a href="#CulturalEvent"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a>
+   </li>
+   <li>
+      <a href="#GrastronomicEvent"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a>
+   </li>
+   <li>
+      <a href="#Hotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#ItalianCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a>
+   </li>
+   <li>
+      <a href="#ItalianRestaurant"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant">ItalianRestaurant</a>
+   </li>
+   <li>
+      <a href="#JapaneseCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a>
+   </li>
+   <li>
+      <a href="#LuxuryHotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel">LuxuryHotel</a>
+   </li>
+   <li>
+      <a href="#MediterraneanCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a>
+   </li>
+   <li>
+      <a href="#MetroTransport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a>
+   </li>
+   <li>
+      <a href="#MexicanCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a>
+   </li>
+   <li>
+      <a href="#Monument"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a>
+   </li>
+   <li>
+      <a href="#Museum"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a>
+   </li>
+   <li>
+      <a href="#MusicalEvent"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a>
+   </li>
+   <li>
+      <a href="#Park"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a>
+   </li>
+   <li>
+      <a href="#Restaurant"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#RuralHotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel">RuralHotel</a>
+   </li>
+   <li>
+      <a href="#SportEvent"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a>
+   </li>
+   <li>
+      <a href="#TaxiTransport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a>
+   </li>
+   <li>
+      <a href="#TeconologicEvent"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a>
+   </li>
+   <li>
+      <a href="#TouristAttraction"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a>
+   </li>
+   <li>
+      <a href="#TouristicHotel"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel">TouristicHotel</a>
+   </li>
+   <li>
+      <a href="#TramTransport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a>
+   </li>
+   <li>
+      <a href="#Transport"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a>
+   </li>
+   <li>
+      <a href="#TransportCompany"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany">TransportCompany</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a>
+   </li>
+   <li>
+      <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a>
+   </li>
+   <li>
+      <a href="#offers"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">offers</a>
+   </li>
+   <li>
+      <a href="#servesCuisine"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a>
+   </li>
+   <li>
+      <a href="#meanPrice"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice">meanPrice</a>
+   </li>
+   <li>
+      <a href="#nightPrice"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice">nightPrice</a>
+   </li>
+   <li>
+      <a href="#rating"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a>
+   </li>
+   <li>
+      <a href="#stars"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/startDate" title="https://schema.org/startDate">startDate</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CarnavalSevilla"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla">
+         <span>Carnaval Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CatedralMálaga"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga">
+         <span>Catedral Málaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HotelRoyalMálaga"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga">
+         <span>Hotel Royal Málaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HotelVistaSevilla"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla">
+         <span>Hotel Vista Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Málaga"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga">
+         <span>Málaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RestauranteSaborSevilla"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla">
+         <span>Restaurante Sabor Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Sevilla"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">
+         <span>Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SevillaBus"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus">
+         <span>Sevilla Bus</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SpaghettiCarbonara"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara">
+         <span>Spaghetti Carbonara</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TransSevilla"
+         title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla">
+         <span>Trans Sevilla</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1421">ItalianRestaurantRule</a>
+   </li>
+   <li>
+      <a href="#d4e1339">LuxuryHotelRule</a>
+   </li>
+   <li>
+      <a href="#d4e1522">TransportCompanyRule</a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">steo: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The STEO ontology is used to represent de domain of touristic offer in Spain</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for steo classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by steo.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a></li>
+  <li><a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a></li>
+  <li><a href="#BeachHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel">BeachHotel</a></li>
+  <li><a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a></li>
+  <li><a href="#BusinessHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel">BusinessHotel</a></li>
+  <li><a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a></li>
+  <li><a href="#https://schema.org/City" title="https://schema.org/City">City</a></li>
+  <li><a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a></li>
+  <li><a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a></li>
+  <li><a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a></li>
+  <li><a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a></li>
+  <li><a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a></li>
+  <li><a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a></li>
+  <li><a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a></li>
+  <li><a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a></li>
+  <li><a href="#ItalianRestaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant">ItalianRestaurant</a></li>
+  <li><a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a></li>
+  <li><a href="#LuxuryHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel">LuxuryHotel</a></li>
+  <li><a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a></li>
+  <li><a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a></li>
+  <li><a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a></li>
+  <li><a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a></li>
+  <li><a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a></li>
+  <li><a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a></li>
+  <li><a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a></li>
+  <li><a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a></li>
+  <li><a href="#RuralHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel">RuralHotel</a></li>
+  <li><a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a></li>
+  <li><a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a></li>
+  <li><a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a></li>
+  <li><a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a></li>
+  <li><a href="#TouristicHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel">TouristicHotel</a></li>
+  <li><a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a></li>
+  <li><a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a></li>
+  <li><a href="#TransportCompany" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany">TransportCompany</a></li>
+ </ul>
+ <div class="entity" id="AndalusianCuisine">
+  <h3>AndalusianCuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine</p>
+  <div class="comment">
+   <span class="markdown">Class to represent the andalusian cuisine type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Beach">
+  <h3>Beach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach</p>
+  <div class="comment">
+   <span class="markdown">Class to represent tourstic beaches</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeachHotel">
+  <h3>BeachHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent beach hotels</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#HotelRoyalMálaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga">Hotel Royal Málaga</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HotelVistaSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla">Hotel Vista Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BikeTransport">
+  <h3>BikeTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent transports by bike</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusinessHotel">
+  <h3>BusinessHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent business hotels</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusTransport">
+  <h3>BusTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent transports by bus</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#SevillaBus" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus">Sevilla Bus</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/City</p>
+  <div class="comment">
+   <span class="markdown">Class that represents Cities</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/City
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Málaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga">Málaga</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dbpedia.org/ontology/Company">
+  <h3>Company<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dbpedia.org/ontology/Company</p>
+  <div class="comment">
+   <span class="markdown">Class that represents companies</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://dbpedia.org/ontology/Company
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TransportCompany" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany">TransportCompany</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#TransSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla">Trans Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Cuisine">
+  <h3>Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine</p>
+  <div class="comment">
+   <span class="markdown">Parent class to represent a type of cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#servesCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Cultural">
+  <h3>Cultural<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural</p>
+  <div class="comment">
+   <span class="markdown">Class to represent touristic cultural attractions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalEvent">
+  <h3>CulturalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">Class to represent cultural events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Event</p>
+  <div class="comment">
+   <span class="markdown">Class to represent all types of events</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/Event
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://schema.org/startDate" title="https://schema.org/startDate">startDate</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GrastronomicEvent">
+  <h3>GastronomicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent</p>
+  <div class="comment">
+   <span class="markdown">Class to represent gastronomic events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent hotels</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusinessHotel">BusinessHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RuralHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel">RuralHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristicHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel">TouristicHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#nightPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice">nightPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stars" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ItalianCuisine">
+  <h3>ItalianCuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine</p>
+  <div class="comment">
+   <span class="markdown">A class to represent the italian cuisine type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#SpaghettiCarbonara" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara">Spaghetti Carbonara</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ItalianRestaurant">
+  <h3>ItalianRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Class to represent restaurants with specific italian cuisine</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="JapaneseCuisine">
+  <h3>JapaneseCuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine</p>
+  <div class="comment">
+   <span class="markdown">A class to represent the japanses cuisine type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LuxuryHotel">
+  <h3>LuxuryHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent luxury hotels. Luxury hotels are hotels with 5 stars.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediterraneanCuisine">
+  <h3>MediterraneanCuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine</p>
+  <div class="comment">
+   <span class="markdown">Class to represent mediterranean cuisine type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine">MexicanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MetroTransport">
+  <h3>MetroTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent transports by metro</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MexicanCuisine">
+  <h3>MexicanCuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MexicanCuisine</p>
+  <div class="comment">
+   <span class="markdown">Class to represent mexican cuisine type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AndalusianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/AndalusianCuisine">AndalusianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/JapaneseCuisine">JapaneseCuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MediterraneanCuisine">MediterraneanCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Monument">
+  <h3>Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument</p>
+  <div class="comment">
+   <span class="markdown">Class to represent touristic monuments</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Museum">
+  <h3>Museum<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum</p>
+  <div class="comment">
+   <span class="markdown">Class to represent tourstic museums</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MusicalEvent">
+  <h3>MusicalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent</p>
+  <div class="comment">
+   <span class="markdown">Class to represent musical events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#CarnavalSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla">Carnaval Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Park">
+  <h3>Park<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park</p>
+  <div class="comment">
+   <span class="markdown">Class to represent touristic parks</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#CatedralMálaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga">Catedral Málaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant</p>
+  <div class="comment">
+   <span class="markdown">Class to represent all types of restaurant</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ItalianRestaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#servesCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#RestauranteSaborSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla">Restaurante Sabor Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RuralHotel">
+  <h3>RuralHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RuralHotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent rural hotels.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SportEvent">
+  <h3>SportEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent</p>
+  <div class="comment">
+   <span class="markdown">Class to represent sport events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#TeconologicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent">TecnologicEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaxiTransport">
+  <h3>TaxiTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent taxi transports</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TeconologicEvent">
+  <h3>TecnologicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TeconologicEvent</p>
+  <div class="comment">
+   <span class="markdown">Class to represent tecnologic events</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#GrastronomicEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/GrastronomicEvent">GastronomicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#SportEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SportEvent">SportEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TouristAttraction">
+  <h3>TouristAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction</p>
+  <div class="comment">
+   <span class="markdown">Class to represent all tourist attractions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Beach" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#Cultural" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#Monument" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#Museum" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TouristicHotel">
+  <h3>TouristicHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristicHotel</p>
+  <div class="comment">
+   <span class="markdown">Class to represent touristic hotels.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TramTransport">
+  <h3>TramTransport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent transports by tram</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport</p>
+  <div class="comment">
+   <span class="markdown">Class to represent different types of transports</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BikeTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BikeTransport">BikeTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#MetroTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MetroTransport">MetroTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TaxiTransport">TaxiTransport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TramTransport">TramTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#offers" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">offers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristAttraction" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransportCompany">
+  <h3>TransportCompany<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany</p>
+  <div class="comment">
+   <span class="markdown">Class that represents a transport company. Subclass of class Company.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#offers" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">offers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a></li>
+  <li><a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a></li>
+  <li><a href="#offers" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">offers</a></li>
+  <li><a href="#servesCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a></li>
+ </ul>
+ <div class="entity" id="https://saref.etsi.org/core/isOfferedBy">
+  <h3>isOfferedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/core/isOfferedBy</p>
+  <div class="comment">
+   <span class="markdown">Defines a relation where an entity such a service is offered by other entities such as a company</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://saref.etsi.org/core/isOfferedBy
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#offers" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers">offers</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://dbpedia.org/ontology/locationCity">
+  <h3>locationCity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dbpedia.org/ontology/locationCity</p>
+  <div class="comment">
+   <span class="markdown">Defines where an entity such as an event is located. This can be a city, country, etc.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://dbpedia.org/ontology/locationCity
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="offers">
+  <h3>offers<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers</p>
+  <div class="comment">
+   <span class="markdown">Defines a relation where an entity such as a company offers a service such as a transport service</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransportCompany" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany">TransportCompany</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="servesCuisine">
+  <h3>servesCuisine<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine</p>
+  <div class="comment">
+   <span class="markdown">Defines the cuisine type such as italian cuisine that a restaurant serves</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Cuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Cuisine">Cuisine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a></li>
+  <li><a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a></li>
+  <li><a href="#meanPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice">meanPrice</a></li>
+  <li><a href="#nightPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice">nightPrice</a></li>
+  <li><a href="#rating" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a></li>
+  <li><a href="#stars" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a></li>
+  <li><a href="#https://schema.org/startDate" title="https://schema.org/startDate">startDate</a></li>
+ </ul>
+ <div class="entity" id="https://schema.org/latitude">
+  <h3>latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/latitude</p>
+  <div class="comment">
+   <span class="markdown">Represents the latitude coordinate of a given entity</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/latitude
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/longitude">
+  <h3>longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/longitude</p>
+  <div class="comment">
+   <span class="markdown">Represents the longitude coordinate of a given entity</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/longitude
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="meanPrice">
+  <h3>meanPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice</p>
+  <div class="comment">
+   <span class="markdown">Represents de mean price of a given entity</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="nightPrice">
+  <h3>nightPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice</p>
+  <div class="comment">
+   <span class="markdown">Represents the price per night of a service such as a Hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="rating">
+  <h3>rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating</p>
+  <div class="comment">
+   <span class="markdown">Represents the rating of a given entity such as a Hotel or a Restaurant</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stars">
+  <h3>stars<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars</p>
+  <div class="comment">
+   <span class="markdown">Represents the stars of a Hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/startDate">
+  <h3>startDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/startDate</p>
+  <div class="comment">
+   <span class="markdown">Represents the start date of an event</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://schema.org/startDate
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Event" title="https://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#CarnavalSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla"> <span>Carnaval Sevilla</span> </a></li>
+  <li><a href="#CatedralMálaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga"> <span>Catedral Málaga</span> </a></li>
+  <li><a href="#HotelRoyalMálaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga"> <span>Hotel Royal Málaga</span> </a></li>
+  <li><a href="#HotelVistaSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla"> <span>Hotel Vista Sevilla</span> </a></li>
+  <li><a href="#Málaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga"> <span>Málaga</span> </a></li>
+  <li><a href="#RestauranteSaborSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla"> <span>Restaurante Sabor Sevilla</span> </a></li>
+  <li><a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla"> <span>Sevilla</span> </a></li>
+  <li><a href="#SevillaBus" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus"> <span>Sevilla Bus</span> </a></li>
+  <li><a href="#SpaghettiCarbonara" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara"> <span>Spaghetti Carbonara</span> </a></li>
+  <li><a href="#TransSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla"> <span>Trans Sevilla</span> </a></li>
+ </ul>
+ <div class="entity" id="CarnavalSevilla">
+  <h3>Carnaval Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CarnavalSevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MusicalEvent" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/MusicalEvent">MusicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#https://schema.org/startDate" title="https://schema.org/startDate">startDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-05-08T00:00:00.000Z"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CatedralMálaga">
+  <h3>Catedral Málaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/CatedralMálaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Park" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Málaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga">Málaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#rating" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.4"^^<a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HotelRoyalMálaga">
+  <h3>Hotel Royal Málaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelRoyalMálaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Málaga" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga">Málaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#nightPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice">nightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"175"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#rating" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.6"^^<a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> </span>
+   </dd>
+   <dd>
+    <a href="#stars" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HotelVistaSevilla">
+  <h3>Hotel Vista Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/HotelVistaSevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BeachHotel">BeachHotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#nightPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/nightPrice">nightPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"278"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#rating" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.7"^^<a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> </span>
+   </dd>
+   <dd>
+    <a href="#stars" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Málaga">
+  <h3>Málaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Málaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"-4.4210"</span>
+   </dd>
+   <dd>
+    <a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"36.7213"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RestauranteSaborSevilla">
+  <h3>Restaurante Sabor Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/RestauranteSaborSevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#servesCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a> <sup class="type-op" title="object property">op</sup> <a href="#SpaghettiCarbonara" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara">Spaghetti Carbonara</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#meanPrice" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/meanPrice">meanPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"72.0"^^<a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> </span>
+   </dd>
+   <dd>
+    <a href="#rating" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/rating">rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.1"^^<a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Sevilla">
+  <h3>Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://schema.org/City" title="https://schema.org/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"-5.9823"</span>
+   </dd>
+   <dd>
+    <a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"37.3886"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SevillaBus">
+  <h3>Sevilla Bus<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SevillaBus</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BusTransport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/BusTransport">BusTransport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#TransSevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla">Trans Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpaghettiCarbonara">
+  <h3>Spaghetti Carbonara<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/SpaghettiCarbonara</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransSevilla">
+  <h3>Trans Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransSevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/ontology/locationCity" title="https://dbpedia.org/ontology/locationCity">locationCity</a> <sup class="type-op" title="object property">op</sup> <a href="#Sevilla" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1421">ItalianRestaurantRule</a></li>
+  <li><a href="#d4e1339">LuxuryHotelRule</a></li>
+  <li><a href="#d4e1522">TransportCompanyRule</a></li>
+ </ul>
+ <div class="entity" id="d4e1421">
+  <h3>ItalianRestaurantRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>A rule that assings ItalianRestaurantClass to restaurants serving italian cuisine<br><br><a href="#Restaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#servesCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine">servesCuisine</a> <sup class="type-op" title="object property">op</sup>(?,?) , <a href="#ItalianCuisine" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianCuisine">ItalianCuisine</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#ItalianRestaurant" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/ItalianRestaurant">ItalianRestaurant</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1339">
+  <h3>LuxuryHotelRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>A rule that assigns luxury subclass to hotels of 5 stars<br><br><a href="#Hotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#stars" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/stars">stars</a> <sup class="type-dp" title="data property">dp</sup>(?,"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) -&gt; <a href="#LuxuryHotel" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/LuxuryHotel">LuxuryHotel</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1522">
+  <h3>TransportCompanyRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>A rule that assigns TransportCompany class to companies that offers a tranpsport service<br><br><a href="#Transport" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/Transport">Transport</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#https://saref.etsi.org/core/isOfferedBy" title="https://saref.etsi.org/core/isOfferedBy">isOfferedBy</a> <sup class="type-op" title="object property">op</sup>(?,?) , <a href="#https://dbpedia.org/ontology/Company" title="https://dbpedia.org/ontology/Company">Company</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#TransportCompany" title="http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/TransportCompany">TransportCompany</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog">null</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
