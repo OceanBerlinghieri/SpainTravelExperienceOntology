@@ -69,16 +69,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/offers
-:offers rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf owl:topObjectProperty ;
-        owl:inverseOf <https://saref.etsi.org/core/isOfferedBy> ;
-        rdfs:domain :TransportCompany ;
-        rdfs:range :Transport ;
-        rdfs:comment "Defines a relation where an entity such as a company offers a service such as a transport service" ;
-        rdfs:label "offers" .
-
-
 ###  http://www.semanticweb.org/oberlinghieri/ontologies/2025/steo/servesCuisine
 :servesCuisine rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -102,11 +92,22 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://saref.etsi.org/core/isOfferedBy
 <https://saref.etsi.org/core/isOfferedBy> rdf:type owl:ObjectProperty ;
                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                          owl:inverseOf <https://saref.etsi.org/core/offers> ;
                                           rdfs:domain :Transport ;
                                           rdfs:range <https://dbpedia.org/ontology/Company> ;
                                           rdfs:comment "Defines a relation where an entity such a service is offered by other entities such as a company" ;
                                           rdfs:isDefinedBy "https://saref.etsi.org/core/isOfferedBy" ;
                                           rdfs:label "isOfferedBy" .
+
+
+###  https://saref.etsi.org/core/offers
+<https://saref.etsi.org/core/offers> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain :TransportCompany ;
+                                     rdfs:range :Transport ;
+                                     rdfs:comment "Defines a relation where an entity such as a company offers a service such as a transport service" ;
+                                     rdfs:isDefinedBy "https://saref.etsi.org/core/offers" ;
+                                     rdfs:label "offers" .
 
 
 #################################################################
@@ -498,7 +499,7 @@ xsd:date rdf:type rdfs:Datatype .
 :TransportCompany rdf:type owl:Class ;
                   rdfs:subClassOf <https://dbpedia.org/ontology/Company> ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty :offers ;
+                                    owl:onProperty <https://saref.etsi.org/core/offers> ;
                                     owl:someValuesFrom :Transport
                                   ] ;
                   rdfs:comment "Class that represents a transport company. Subclass of class Company." ;
